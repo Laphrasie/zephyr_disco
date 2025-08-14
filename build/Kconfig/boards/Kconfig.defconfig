@@ -1,0 +1,2 @@
+# Load Zephyr board defconfig descriptions.
+osource "/home/arnaud/zephyrproject/zephyr/boards/st/stm32h747i_disco/Kconfig.defconfig"

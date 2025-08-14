@@ -1,0 +1,2 @@
+# Load board Kconfig descriptions.
+osource "/home/arnaud/zephyrproject/zephyr/boards/st/stm32h747i_disco/Kconfig.stm32h747i_disco"
