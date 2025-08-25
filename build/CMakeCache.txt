@@ -94,12 +94,11 @@ CMAKE_ASM_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the ASM compiler during RELWITHDEBINFO builds.
 CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//Choose the type of build, options are: None Debug Release RelWithDebInfo
-// MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+//No help, variable specified on the command line.
+CMAKE_BUILD_TYPE:STRING=Debug
 
-//CXX compiler
-CMAKE_CXX_COMPILER:STRING=/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-g++
+//No help, variable specified on the command line.
+CMAKE_CXX_COMPILER:FILEPATH=/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-g++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -124,8 +123,8 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//C compiler
-CMAKE_C_COMPILER:STRING=/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc
+//Path to a program.
+CMAKE_C_COMPILER:FILEPATH=/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -384,9 +383,6 @@ ZEPHYR_BASE:PATH=/home/arnaud/zephyrproject/zephyr
 //Path to Zephyr git repository index file
 ZEPHYR_GIT_INDEX:PATH=/home/arnaud/zephyrproject/zephyr/.git/index
 
-//Zephyr SDK install directory
-ZEPHYR_SDK_INSTALL_DIR:PATH=/home/arnaud/zephyr-sdk-0.17.2
-
 //Zephyr toolchain variant
 ZEPHYR_TOOLCHAIN_VARIANT:STRING=zephyr
 
@@ -480,8 +476,6 @@ CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_COMPILER
-CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_AR
 CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
@@ -599,6 +593,8 @@ SOC_DIRECTORIES:INTERNAL=/home/arnaud/zephyrproject/zephyr/soc/st/stm32
 SOC_LINKER_SCRIPT:INTERNAL=/home/arnaud/zephyrproject/zephyr/include/zephyr/arch/arm/cortex_m/scripts/linker.ld
 //West
 WEST:INTERNAL=/home/arnaud/zephyrproject/.venv/bin/python3;-m;west
+//Cached environment variable ZEPHYR_SDK_INSTALL_DIR
+ZEPHYR_SDK_INSTALL_DIR:INTERNAL=/home/arnaud/zephyr-sdk-0.17.2
 //Compiler reason failure
 _Python3_Compiler_REASON_FAILURE:INTERNAL=
 //Development reason failure
@@ -607,6 +603,8 @@ _Python3_EXECUTABLE:INTERNAL=/home/arnaud/zephyrproject/.venv/bin/python3
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;3;64;;cpython-312-x86_64-linux-gnu.so;abi3;/usr/lib/python3.12;/home/arnaud/zephyrproject/.venv/lib/python3.12;/home/arnaud/zephyrproject/.venv/lib/python3.12/site-packages;/home/arnaud/zephyrproject/.venv/lib/python3.12/site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=4f45fb216704415dfd7416021543eb45
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 

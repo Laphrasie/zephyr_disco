@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "zephyr/soc/soc/stm32h747xx",
+		"source" : "/home/arnaud/zephyrproject/zephyr/soc/st/stm32"
+	}
+}

@@ -1,0 +1,5 @@
+west:
+  command: /home/arnaud/zephyrproject/.venv/bin/west build -p always -b stm32h747i_disco/stm32h747xx/m7
+    ./
+  topdir: /home/arnaud/zephyrproject
+  version: 1.4.0

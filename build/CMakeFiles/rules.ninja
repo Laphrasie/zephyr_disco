@@ -7,14 +7,14 @@
 
 # =============================================================================
 # Project: first_project
-# Configurations: 
+# Configurations: Debug
 # =============================================================================
 # =============================================================================
 
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__app_unscanned_
+rule C_COMPILER__app_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule C_COMPILER__app_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__app_
+rule C_STATIC_LIBRARY_LINKER__app_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -41,7 +41,7 @@ rule CUSTOM_COMMAND
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__zephyr_unscanned_
+rule C_COMPILER__zephyr_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -51,7 +51,7 @@ rule C_COMPILER__zephyr_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__zephyr_
+rule C_STATIC_LIBRARY_LINKER__zephyr_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -60,7 +60,7 @@ rule C_STATIC_LIBRARY_LINKER__zephyr_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__offsets_unscanned_
+rule C_COMPILER__offsets_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -70,7 +70,7 @@ rule C_COMPILER__offsets_unscanned_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__zephyr_pre0_unscanned_
+rule C_COMPILER__zephyr_pre0_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -80,7 +80,7 @@ rule C_COMPILER__zephyr_pre0_unscanned_
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__zephyr_pre0_
+rule C_EXECUTABLE_LINKER__zephyr_pre0_Debug
   command = $PRE_LINK && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES -L"/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v7e-m/nofp" -lc -lgcc && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
@@ -89,7 +89,7 @@ rule C_EXECUTABLE_LINKER__zephyr_pre0_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__zephyr_final_unscanned_
+rule C_COMPILER__zephyr_final_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -99,7 +99,7 @@ rule C_COMPILER__zephyr_final_unscanned_
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__zephyr_final_
+rule C_EXECUTABLE_LINKER__zephyr_final_Debug
   command = $PRE_LINK && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES -L"/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v7e-m/nofp" -lc -lgcc && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
@@ -108,7 +108,7 @@ rule C_EXECUTABLE_LINKER__zephyr_final_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__arch__common_unscanned_
+rule C_COMPILER__arch__common_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -118,7 +118,7 @@ rule C_COMPILER__arch__common_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__arch__common_
+rule C_STATIC_LIBRARY_LINKER__arch__common_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -127,7 +127,7 @@ rule C_STATIC_LIBRARY_LINKER__arch__common_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__isr_tables_unscanned_
+rule C_COMPILER__isr_tables_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -137,7 +137,7 @@ rule C_COMPILER__isr_tables_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__isr_tables_
+rule C_STATIC_LIBRARY_LINKER__isr_tables_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -146,7 +146,7 @@ rule C_STATIC_LIBRARY_LINKER__isr_tables_
 #############################################
 # Rule for compiling ASM files.
 
-rule ASM_COMPILER__arch__arm__core_unscanned_
+rule ASM_COMPILER__arch__arm__core_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -156,7 +156,7 @@ rule ASM_COMPILER__arch__arm__core_unscanned_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__arch__arm__core_unscanned_
+rule C_COMPILER__arch__arm__core_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -166,7 +166,7 @@ rule C_COMPILER__arch__arm__core_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__arch__arm__core_
+rule C_STATIC_LIBRARY_LINKER__arch__arm__core_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -175,7 +175,7 @@ rule C_STATIC_LIBRARY_LINKER__arch__arm__core_
 #############################################
 # Rule for compiling ASM files.
 
-rule ASM_COMPILER__arch__arm__core__cortex_m_unscanned_
+rule ASM_COMPILER__arch__arm__core__cortex_m_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -185,7 +185,7 @@ rule ASM_COMPILER__arch__arm__core__cortex_m_unscanned_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__arch__arm__core__cortex_m_unscanned_
+rule C_COMPILER__arch__arm__core__cortex_m_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -195,7 +195,7 @@ rule C_COMPILER__arch__arm__core__cortex_m_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__arch__arm__core__cortex_m_
+rule C_STATIC_LIBRARY_LINKER__arch__arm__core__cortex_m_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -204,7 +204,7 @@ rule C_STATIC_LIBRARY_LINKER__arch__arm__core__cortex_m_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__arch__arm__core__mpu_unscanned_
+rule C_COMPILER__arch__arm__core__mpu_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -214,7 +214,7 @@ rule C_COMPILER__arch__arm__core__mpu_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__arch__arm__core__mpu_
+rule C_STATIC_LIBRARY_LINKER__arch__arm__core__mpu_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -223,7 +223,7 @@ rule C_STATIC_LIBRARY_LINKER__arch__arm__core__mpu_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__lib__libc__picolibc_unscanned_
+rule C_COMPILER__lib__libc__picolibc_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -233,7 +233,7 @@ rule C_COMPILER__lib__libc__picolibc_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__lib__libc__picolibc_
+rule C_STATIC_LIBRARY_LINKER__lib__libc__picolibc_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -242,7 +242,7 @@ rule C_STATIC_LIBRARY_LINKER__lib__libc__picolibc_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__lib__libc__common_unscanned_
+rule C_COMPILER__lib__libc__common_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -252,7 +252,7 @@ rule C_COMPILER__lib__libc__common_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__lib__libc__common_
+rule C_STATIC_LIBRARY_LINKER__lib__libc__common_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -261,7 +261,7 @@ rule C_STATIC_LIBRARY_LINKER__lib__libc__common_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__lib__posix__options_unscanned_
+rule C_COMPILER__lib__posix__options_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -271,7 +271,7 @@ rule C_COMPILER__lib__posix__options_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__lib__posix__options_
+rule C_STATIC_LIBRARY_LINKER__lib__posix__options_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -280,7 +280,7 @@ rule C_STATIC_LIBRARY_LINKER__lib__posix__options_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__drivers__interrupt_controller_unscanned_
+rule C_COMPILER__drivers__interrupt_controller_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -290,7 +290,7 @@ rule C_COMPILER__drivers__interrupt_controller_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__drivers__interrupt_controller_
+rule C_STATIC_LIBRARY_LINKER__drivers__interrupt_controller_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -299,7 +299,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__interrupt_controller_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__drivers__clock_control_unscanned_
+rule C_COMPILER__drivers__clock_control_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -309,7 +309,7 @@ rule C_COMPILER__drivers__clock_control_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__drivers__clock_control_
+rule C_STATIC_LIBRARY_LINKER__drivers__clock_control_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -318,7 +318,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__clock_control_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__drivers__console_unscanned_
+rule C_COMPILER__drivers__console_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -328,7 +328,7 @@ rule C_COMPILER__drivers__console_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__drivers__console_
+rule C_STATIC_LIBRARY_LINKER__drivers__console_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -337,7 +337,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__console_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__drivers__gpio_unscanned_
+rule C_COMPILER__drivers__gpio_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -347,7 +347,7 @@ rule C_COMPILER__drivers__gpio_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__drivers__gpio_
+rule C_STATIC_LIBRARY_LINKER__drivers__gpio_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -356,7 +356,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__gpio_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__drivers__pinctrl_unscanned_
+rule C_COMPILER__drivers__pinctrl_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -366,7 +366,7 @@ rule C_COMPILER__drivers__pinctrl_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__drivers__pinctrl_
+rule C_STATIC_LIBRARY_LINKER__drivers__pinctrl_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -375,7 +375,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__pinctrl_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__drivers__reset_unscanned_
+rule C_COMPILER__drivers__reset_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -385,7 +385,7 @@ rule C_COMPILER__drivers__reset_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__drivers__reset_
+rule C_STATIC_LIBRARY_LINKER__drivers__reset_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -394,7 +394,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__reset_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__drivers__serial_unscanned_
+rule C_COMPILER__drivers__serial_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -404,7 +404,7 @@ rule C_COMPILER__drivers__serial_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__drivers__serial_
+rule C_STATIC_LIBRARY_LINKER__drivers__serial_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -413,7 +413,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__serial_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__drivers__timer_unscanned_
+rule C_COMPILER__drivers__timer_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -423,7 +423,7 @@ rule C_COMPILER__drivers__timer_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__drivers__timer_
+rule C_STATIC_LIBRARY_LINKER__drivers__timer_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -432,7 +432,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__timer_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__.2e.2e__modules__hal__stm32__stm32cube_unscanned_
+rule C_COMPILER__.2e.2e__modules__hal__stm32__stm32cube_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -442,7 +442,7 @@ rule C_COMPILER__.2e.2e__modules__hal__stm32__stm32cube_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__.2e.2e__modules__hal__stm32__stm32cube_
+rule C_STATIC_LIBRARY_LINKER__.2e.2e__modules__hal__stm32__stm32cube_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -451,7 +451,7 @@ rule C_STATIC_LIBRARY_LINKER__.2e.2e__modules__hal__stm32__stm32cube_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__kernel_unscanned_
+rule C_COMPILER__kernel_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ccache ${LAUNCHER}${CODE_CHECK}/home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -461,7 +461,7 @@ rule C_COMPILER__kernel_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__kernel_
+rule C_STATIC_LIBRARY_LINKER__kernel_Debug
   command = $PRE_LINK && ccache /usr/bin/cmake -E rm -f $TARGET_FILE && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/arnaud/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT

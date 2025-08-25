@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "zephyr/boards/st/stm32h747i_disco",
+		"source" : "/home/arnaud/zephyrproject/zephyr/boards/st/stm32h747i_disco"
+	}
+}

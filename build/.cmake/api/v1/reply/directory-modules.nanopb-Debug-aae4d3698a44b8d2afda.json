@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "modules/nanopb",
+		"source" : "/home/arnaud/zephyrproject/zephyr/modules/nanopb"
+	}
+}

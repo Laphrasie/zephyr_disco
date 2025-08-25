@@ -1,0 +1,58 @@
+cmake:
+  application:
+    configuration-dir: '/home/arnaud/Tech/Projects/Software/Perso/Zephyr/first_project/m7'
+    source-dir: '/home/arnaud/Tech/Projects/Software/Perso/Zephyr/first_project/m7'
+  board:
+    name: 'stm32h747i_disco'
+    path:
+     - '/home/arnaud/zephyrproject/zephyr/boards/st/stm32h747i_disco'
+    qualifiers: 'stm32h747xx/m7'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/arnaud/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/arnaud/zephyrproject/zephyr/boards/st/stm32h747i_disco/stm32h747i_disco_stm32h747xx_m7.dts'
+    include-dirs:
+     - '/home/arnaud/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/arnaud/zephyrproject/modules/hal/atmel/include'
+     - '/home/arnaud/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/arnaud/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/arnaud/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/arnaud/zephyrproject/modules/hal/microchip/include'
+     - '/home/arnaud/zephyrproject/modules/hal/microchip/dts'
+     - '/home/arnaud/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/arnaud/zephyrproject/modules/hal/nxp/dts'
+     - '/home/arnaud/zephyrproject/modules/hal/stm32/dts'
+     - '/home/arnaud/zephyrproject/modules/hal/ti/dts'
+     - '/home/arnaud/zephyrproject/zephyr/include'
+     - '/home/arnaud/zephyrproject/zephyr/include/zephyr'
+     - '/home/arnaud/zephyrproject/zephyr/dts/common'
+     - '/home/arnaud/zephyrproject/zephyr/dts/vendor'
+     - '/home/arnaud/zephyrproject/zephyr/dts/rx'
+     - '/home/arnaud/zephyrproject/zephyr/dts/x86'
+     - '/home/arnaud/zephyrproject/zephyr/dts/xtensa'
+     - '/home/arnaud/zephyrproject/zephyr/dts/sparc'
+     - '/home/arnaud/zephyrproject/zephyr/dts/riscv'
+     - '/home/arnaud/zephyrproject/zephyr/dts/posix'
+     - '/home/arnaud/zephyrproject/zephyr/dts/arm64'
+     - '/home/arnaud/zephyrproject/zephyr/dts/arm'
+     - '/home/arnaud/zephyrproject/zephyr/dts/arc'
+     - '/home/arnaud/zephyrproject/zephyr/dts'
+  kconfig:
+    files:
+     - '/home/arnaud/zephyrproject/zephyr/boards/st/stm32h747i_disco/stm32h747i_disco_stm32h747xx_m7_defconfig'
+     - '/home/arnaud/Tech/Projects/Software/Perso/Zephyr/first_project/m7/prj.conf'
+    user-files:
+     - '/home/arnaud/Tech/Projects/Software/Perso/Zephyr/first_project/m7/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/arnaud/zephyr-sdk-0.17.2'
+  zephyr:
+    version: '4.2.99'
+    zephyr-base: '/home/arnaud/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/arnaud/zephyrproject/.venv/bin/west build -p always -b stm32h747i_disco/stm32h747xx/m7 ./'
+  topdir: '/home/arnaud/zephyrproject'
+  version: '1.4.0'
